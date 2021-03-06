@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS with Dash Nav</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- own css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">varun.dev</div>
+        <div class="search">
+            <i class="fa fa-search "></i>
+            <input type="text">       
+        </div>
+        <div class="menu"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            
+            <div class="profile">
+                <div class="profile_avatar">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                </div>
+                <div class="profile_name">
+                    <h2>Varun Krishnan V</h2>
+                    <p>varunkrishnan0001@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="nav">
+    
+                <div data-href="google.com" class="nav_item">
+                    <div class="icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="nav_link">
+                        <a href="#">Home</a>
+                    </div>
+                </div>
+
+                    <div class="nav_item">
+                        <div class="icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="nav_link">
+                            <a href="#">Home</a>
+                        </div>
+                    </div>
+    
+                    <div class="nav_item">
+                        <div class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="nav_link">
+                            <a href="">Orders</a>
+                        </div>
+                    </div>
+    
+                    <div class="nav_item">
+                        <div class="icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="nav_link">
+                            <a href="">Users</a>
+                        </div>
+                    </div>
+    
+                    <div class="nav_item">
+                        <div class="icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="nav_link">
+                            <a href="">Products</a>
+                        </div>
+                    </div>                
+            </div>
+        </div>
+        <div class="content">
+            <div class="count-cards">
+                
+                <div class="card">
+                    <div class="card-title">
+                        Facebook
+                    </div>
+                    <div class="card-count">
+                        100
+                    </div>
+                </div>
+                
+
+            <div class="card">
+                <div class="card-title">
+                    Instagram
+                </div>
+                <div class="card-count">
+                    150
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    Twitter
+                </div>
+                <div class="card-count">
+                    80
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
