@@ -1,0 +1,61 @@
+.count-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 15px;
+}
+
+.count-cards .card {
+  background-color: #dadada;
+  padding: 20px 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20px max-content;
+      grid-template-rows: 20px -webkit-max-content;
+      grid-template-rows: 20px max-content;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 159, 0.678);
+  position: relative;
+}
+
+.count-cards .card .card-title {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  z-index: 2;
+}
+
+.count-cards .card .card-count {
+  font-weight: 700;
+  font-size: 30px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  color: white;
+}
+
+.count-cards .card .card-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 5em;
+  opacity: .2;
+  z-index: 1;
+}
+
+.card3 .card-icon {
+  color: red;
+  border-radius: 200px;
+}
+
+.card1 {
+  background: linear-gradient(120deg, #028090, #00a896, #02c39a);
+}
+
+.card2 {
+  background: linear-gradient(120deg, #a53860, #e4727a, #e05861);
+}
+
+.card3 {
+  background: linear-gradient(120deg, #6117a2, #9d4edd, #c77dff);
+}
+/*# sourceMappingURL=cards.css.map */

@@ -1,4 +1,7 @@
-$font : montserrat;
+@import "typography" ;
+
+$font : poppins;
+
 
 @mixin centerAlign($direction) {
     display: flex;
@@ -10,7 +13,7 @@ $font : montserrat;
 *{
    box-sizing: border-box; 
    font-family: $font;
-   font-family: 'Montserrat', sans-serif;
+   font-family: $font , sans-serif;
    margin: 0;
    padding: 0;
    color: rgb(56, 56, 56);
@@ -22,46 +25,57 @@ $font : montserrat;
     width: 2px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(184, 180, 179);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(184, 180, 179);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
 
 
 .header{
-    background:#F7F7F7;
-    color: rgb(56, 56, 56);
+    background:#fff;
+    color:rgb(22, 22, 22);
     height: 10vh;
-    border-bottom: 2px solid white;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 3px 5px rgb(218, 218, 218);
     padding: 20px;
-    input{
-        padding:8px 15px;
+    background: white;   
+    margin-bottom:3px; 
+    
+
+
+    position: fixed;
+    width: 100%;
+
+
+
+        input{
+        padding:3px 15px;
         outline: none;
         border: none;
         border-radius: 30px;
-        font-size: 12px;
-        
-    }
-    .fa-search{
-        color: rgb(145, 145, 145);
-        position: relative;
-        left: 0px;
-    }
+        font-size: 10px;
+        border: 2px solid #e6e6e6;
+            
+        }
+        .fa-search{
+            color: rgb(216, 216, 216);
+            position: relative;
+            left: 0px;
+            border-radius: 14px;
+        }
 }
 
 .menu{
@@ -70,10 +84,10 @@ $font : montserrat;
 
 .container{
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: 300px auto;
 }
 .sidebar{
-    background-color: #f7f7f7;
+    background-color: #fff;
     height: 90vh;
     width: max-content;
     padding: 10px 20px;
@@ -81,8 +95,13 @@ $font : montserrat;
     margin-top: 0px  ;
     // animation: slidein 1s ease forwards;
     overflow-y: scroll;
+    width: 300px;
 
 
+
+    position: fixed;
+    top: 9vh;
+    z-index: 2;
 }
 @keyframes slidein{
     0%{
@@ -95,9 +114,13 @@ $font : montserrat;
 }
 
 .logo{
-    font-weight: 700;
-    font-size: 21px;
-    color: rgb(53, 53, 53);
+    background:gray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: poppins;
 }
 .dot{
     color: orangered;
@@ -125,9 +148,9 @@ $font : montserrat;
 }
 
 .profile_name h2{
-    font-weight: 400px;
-    font-size: 16px;
+    font-size: 15px;
     color: rgb(97, 97, 97);
+    font-weight: 500;
 }
 
 .profile_name p{
@@ -163,6 +186,7 @@ $font : montserrat;
         padding: 17px 10px;
     }
 
+
 }
 
 
@@ -174,29 +198,12 @@ $font : montserrat;
 
 .content{
     padding: 20px ;
+    background-color: #f2f2f2;
+    width: 100%;
+
 }
 
-.count-cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    grid-gap:15px;
-    .card{
-        background-color: rgb(218, 218, 218);
-        padding: 10px;
-        display: grid;
-        grid-template-rows: 20px 30px;
-        .card-title{
-            font-weight: 600;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-        .card-count{
-            font-weight: 700;
-            font-size: 30px;
-            justify-self: end;
-            color: rgb(104, 104, 104);
-        }
-    }
-}
+
 
 
 @media only screen and (max-width:900px){
@@ -206,9 +213,10 @@ $font : montserrat;
     }
     .sidebar{
         display: none;
-        position: absolute;
+        position: fixed;
         left: -100%;
         user-select: none;
+        z-index: 5;
         
     }
     .menu{
@@ -223,4 +231,53 @@ $font : montserrat;
     .search{
         display: none;
     }
+}
+
+
+
+.content{
+    padding: 20px ;
+    background-color: #f2f2f2;
+    width: 100%;
+    grid-column: 2/3;
+position: relative;
+    top: 11vh;
+
+}
+
+.sidebar{
+    background-color: #fff;
+    height: 90vh;
+    width: max-content;
+    padding: 10px 20px;
+    box-shadow: 0px 3px 5px rgb(218, 218, 218);
+    margin-top: 0px  ;
+
+    // animation: slidein 1s ease forwards;
+    overflow-y: scroll;
+    width: 300px;
+
+
+    position: fixed;
+    top: 9vh;
+    z-index: 6;
+}
+
+
+.header{
+
+    background:#fff;
+    color:rgb(22, 22, 22);
+    height: 10vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px rgb(218, 218, 218);
+    padding: 20px;
+    background: white;   
+    margin-bottom:3px; 
+    position: fixed;
+    width: 100%;
+
 }
